@@ -1,19 +1,85 @@
 {
-  "last_updated": "2026-05-24",
-  "vulnerabilities": [
-    {
-      "cve_id": "CVE-TEST-001",
-      "device_keyword": "iptime",
-      "port": 80,
-      "cvss_score": 9.8,
-      "description": "Admin password bypass vulnerability in web interface.",
-      "easy_description": "집 대문(관리자 페이지) 자물쇠가 고장 나서 아무나 열고 들어올 수 있는 상태입니다.",
-      "danger_keywords": ["관리자 권한 탈취", "비밀번호 우회"],
-      "step_by_step_guide": [
-        "공유기 설정 페이지(192.168.0.1)에 접속하세요.",
-        "관리자 계정으로 로그인하세요.",
-        "시스템 설정에서 펌웨어를 최신 버전으로 업데이트하세요."
-      ]
-    }
-  ]
+    "last_updated": "2026-05-23 19:15:48",
+    "vulnerabilities": [
+        {
+            "cve_id": "CVE-1999-1466",
+            "device_keyword": "router",
+            "port": 80,
+            "cvss_score": 0.0,
+            "description": "Vulnerability in Cisco routers versions 8.2 through 9.1 allows remote attackers to bypass access control lists when extended IP access lists are used on certain interfaces, the IP route cache is enabled, and the access list uses the \"established\" keyword.",
+            "easy_description": "기기 펌웨어 취약점이 발견되었습니다.",
+            "danger_keywords": [
+                "네트워크 위험",
+                "원격접근"
+            ],
+            "step_by_step_guide": [
+                "제조사 홈페이지에 접속하세요.",
+                "최신 펌웨어 버전을 다운로드하여 설치하세요."
+            ]
+        },
+        {
+            "cve_id": "CVE-1999-1216",
+            "device_keyword": "router",
+            "port": 80,
+            "cvss_score": 0.0,
+            "description": "Cisco routers 9.17 and earlier allow remote attackers to bypass security restrictions via certain IP source routed packets that should normally be denied using the \"no ip source-route\" command.",
+            "easy_description": "기기 펌웨어 취약점이 발견되었습니다.",
+            "danger_keywords": [
+                "네트워크 위험",
+                "원격접근"
+            ],
+            "step_by_step_guide": [
+                "제조사 홈페이지에 접속하세요.",
+                "최신 펌웨어 버전을 다운로드하여 설치하세요."
+            ]
+        },
+        {
+            "cve_id": "CVE-1999-0510",
+            "device_keyword": "router",
+            "port": 80,
+            "cvss_score": 0.0,
+            "description": "A router or firewall allows source routed packets from arbitrary hosts.",
+            "easy_description": "기기 펌웨어 취약점이 발견되었습니다.",
+            "danger_keywords": [
+                "네트워크 위험",
+                "원격접근"
+            ],
+            "step_by_step_guide": [
+                "제조사 홈페이지에 접속하세요.",
+                "최신 펌웨어 버전을 다운로드하여 설치하세요."
+            ]
+        },
+        {
+            "cve_id": "CVE-1999-0511",
+            "device_keyword": "router",
+            "port": 80,
+            "cvss_score": 0.0,
+            "description": "IP forwarding is enabled on a machine which is not a router or firewall.",
+            "easy_description": "기기 펌웨어 취약점이 발견되었습니다.",
+            "danger_keywords": [
+                "네트워크 위험",
+                "원격접근"
+            ],
+            "step_by_step_guide": [
+                "제조사 홈페이지에 접속하세요.",
+                "최신 펌웨어 버전을 다운로드하여 설치하세요."
+            ]
+        },
+        {
+            "cve_id": "CVE-1999-0550",
+            "device_keyword": "router",
+            "port": 80,
+            "cvss_score": 0.0,
+            "description": "A router's routing tables can be obtained from arbitrary hosts.",
+            "easy_description": "기기 펌웨어 취약점이 발견되었습니다.",
+            "danger_keywords": [
+                "네트워크 위험",
+                "원격접근"
+            ],
+            "step_by_step_guide": [
+                "제조사 홈페이지에 접속하세요.",
+                "최신 펌웨어 버전을 다운로드하여 설치하세요."
+            ]
+        }
+    ]
 }
