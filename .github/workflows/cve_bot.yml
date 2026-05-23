@@ -1,0 +1,35 @@
+name: 실시간 CVE 데이터 수집 봇
+
+on:
+  schedule:
+    - cron: '0 19 * * *' # 매일 한국 시간 새벽 4시에 자동 실행
+  workflow_dispatch: # 수동으로 버튼을 눌러서 바로 실행할 수 있는 스위치
+
+jobs:
+  update-cve:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 봇이 파일을 덮어쓸 수 있도록 권한 부여
+
+    steps:
+      - name: 깃허브 코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: 파이썬 세팅하기
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: requests 라이브러리 설치
+        run: pip install requests
+
+      - name: 파이썬 봇 실행 (NVD 데이터 가져오기)
+        run: python fetch_cve.py
+
+      - name: 새로 만들어진 json 파일을 깃허브에 저장(Commit)
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add cve_data.json
+          git commit -m "🚀 NVD 취약점 데이터 실시간 업데이트 완료" || exit 0
+          git push
