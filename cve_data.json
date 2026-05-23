@@ -1,0 +1,19 @@
+{
+  "last_updated": "2026-05-24",
+  "vulnerabilities": [
+    {
+      "cve_id": "CVE-TEST-001",
+      "device_keyword": "iptime",
+      "port": 80,
+      "cvss_score": 9.8,
+      "description": "Admin password bypass vulnerability in web interface.",
+      "easy_description": "집 대문(관리자 페이지) 자물쇠가 고장 나서 아무나 열고 들어올 수 있는 상태입니다.",
+      "danger_keywords": ["관리자 권한 탈취", "비밀번호 우회"],
+      "step_by_step_guide": [
+        "공유기 설정 페이지(192.168.0.1)에 접속하세요.",
+        "관리자 계정으로 로그인하세요.",
+        "시스템 설정에서 펌웨어를 최신 버전으로 업데이트하세요."
+      ]
+    }
+  ]
+}
