@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-05-23 20:04:46",
+    "last_updated": "2026-05-24 20:03:21",
     "vulnerabilities": [
         {
             "cve_id": "CVE-2001-0442",
@@ -358,6 +358,63 @@
             "cvss_score": 0.0,
             "description": "Stack-based buffer overflow in Image Raw in Apple Mac OS X 10.5.2, and Digital Camera RAW Compatibility before Update 2.0 for Aperture 2 and iPhoto 7.1.2, allows remote attackers to execute arbitrary code via a crafted Adobe Digital Negative (DNG) image.",
             "easy_description": "IP CAMERA 기기 군에서 원격 제어, 사생활 유출 및 악성코드 주입이 가능한 치명적인 취약점이 발견되었습니다.",
+            "danger_keywords": [
+                "IoT 해킹 위협",
+                "원격 권한 탈취",
+                "사생활 노출 위험"
+            ],
+            "step_by_step_guide": [
+                "1. 카메라/도어락 관리자 페이지 또는 전용 연동 앱에 접속하세요.",
+                "2. 초기 설정된 관리자 비밀번호를 영문+숫자+특수문자 조합으로 즉시 변경하세요.",
+                "3. 외부 원격 접속 기능(P2P/RTSP 등) 중 사용하지 않는 기능은 비활성화하세요.",
+                "4. 시스템 최신 펌웨어 업데이트를 강제 진행하세요."
+            ]
+        },
+        {
+            "cve_id": "CVE-1999-1292",
+            "device_keyword": "webcam",
+            "port": 80,
+            "cvss_score": 0.0,
+            "description": "Buffer overflow in web administration feature of Kolban Webcam32 4.8.3 and earlier allows remote attackers to execute arbitrary commands via a long URL.",
+            "easy_description": "WEBCAM 기기 군에서 원격 제어, 사생활 유출 및 악성코드 주입이 가능한 치명적인 취약점이 발견되었습니다.",
+            "danger_keywords": [
+                "IoT 해킹 위협",
+                "원격 권한 탈취",
+                "사생활 노출 위험"
+            ],
+            "step_by_step_guide": [
+                "1. 카메라/도어락 관리자 페이지 또는 전용 연동 앱에 접속하세요.",
+                "2. 초기 설정된 관리자 비밀번호를 영문+숫자+특수문자 조합으로 즉시 변경하세요.",
+                "3. 외부 원격 접속 기능(P2P/RTSP 등) 중 사용하지 않는 기능은 비활성화하세요.",
+                "4. 시스템 최신 펌웨어 업데이트를 강제 진행하세요."
+            ]
+        },
+        {
+            "cve_id": "CVE-2000-0043",
+            "device_keyword": "webcam",
+            "port": 80,
+            "cvss_score": 0.0,
+            "description": "Buffer overflow in CamShot WebCam HTTP server allows remote attackers to execute commands via a long GET request.",
+            "easy_description": "WEBCAM 기기 군에서 원격 제어, 사생활 유출 및 악성코드 주입이 가능한 치명적인 취약점이 발견되었습니다.",
+            "danger_keywords": [
+                "IoT 해킹 위협",
+                "원격 권한 탈취",
+                "사생활 노출 위험"
+            ],
+            "step_by_step_guide": [
+                "1. 카메라/도어락 관리자 페이지 또는 전용 연동 앱에 접속하세요.",
+                "2. 초기 설정된 관리자 비밀번호를 영문+숫자+특수문자 조합으로 즉시 변경하세요.",
+                "3. 외부 원격 접속 기능(P2P/RTSP 등) 중 사용하지 않는 기능은 비활성화하세요.",
+                "4. 시스템 최신 펌웨어 업데이트를 강제 진행하세요."
+            ]
+        },
+        {
+            "cve_id": "CVE-2000-0836",
+            "device_keyword": "webcam",
+            "port": 80,
+            "cvss_score": 0.0,
+            "description": "Buffer overflow in CamShot WebCam Trial2.6 allows remote attackers to execute arbitrary commands via a long Authorization header.",
+            "easy_description": "WEBCAM 기기 군에서 원격 제어, 사생활 유출 및 악성코드 주입이 가능한 치명적인 취약점이 발견되었습니다.",
             "danger_keywords": [
                 "IoT 해킹 위협",
                 "원격 권한 탈취",
