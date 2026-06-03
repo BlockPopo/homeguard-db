@@ -33,9 +33,9 @@ git clone [https://github.com/your-repo/AIHomeGuard-CVE-Bot.git](https://github.
 cd AIHomeGuard-CVE-Bot
 
 # 의존성 패키지 설치
-pip install requests
+pip install requests```
 
-## 데이터 설치 예시
+## json 데이터 출력 예시
 [
   {
     "cve_id": "CVE-2026-12345",
