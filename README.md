@@ -26,12 +26,13 @@
 - Python 3.8 이상
 - `requests` 라이브러리
 
-### 설치 (Installation)
-# 저장소 클론
+## 설치 (Installation)
+
+### 저장소 클론
 git clone https://github.com/your-repo/AIHomeGuard-CVE-Bot.git
 cd AIHomeGuard-CVE-Bot
 
-# 의존성 패키지 설치
+### 의존성 패키지 설치
 pip install requests
 
 ## 📄 데이터 출력 예시 (JSON Output Format)
