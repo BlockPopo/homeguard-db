@@ -29,13 +29,16 @@
 ### 설치 (Installation)
 ```bash
 # 저장소 클론
-git clone [https://github.com/your-repo/AIHomeGuard-CVE-Bot.git](https://github.com/your-repo/AIHomeGuard-CVE-Bot.git)
+git clone https://github.com/your-repo/AIHomeGuard-CVE-Bot.git
 cd AIHomeGuard-CVE-Bot
 
 # 의존성 패키지 설치
-pip install requests`
+pip install requests
 
-## json 데이터 출력 예시
+📄 데이터 출력 예시 (JSON Output Format)
+모바일 클라이언트의 동적 라우팅 및 렌더링을 위해 가공된 JSON 데이터의 예시입니다.
+
+JSON
 [
   {
     "cve_id": "CVE-2026-12345",
