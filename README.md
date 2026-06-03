@@ -29,7 +29,7 @@
 ## 설치 (Installation)
 
 ### 저장소 클론
-git clone https://github.com/your-repo/AIHomeGuard-CVE-Bot.git(https://github.com/your-repo/AIHomeGuard-CVE-Bot.git)
+git clone [https://github.com/your-repo/AIHomeGuard-CVE-Bot.git](https://github.com/your-repo/AIHomeGuard-CVE-Bot.git)
 cd AIHomeGuard-CVE-Bot
 
 ### 의존성 패키지 설치
