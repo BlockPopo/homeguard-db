@@ -39,7 +39,7 @@ pip install requests
 
 모바일 클라이언트의 동적 라우팅 및 렌더링을 위해 가공된 JSON 데이터의 예시입니다.
 
-[
+```[
   {
     "cve_id": "CVE-2026-12345",
     "target_device": "Router",
@@ -55,4 +55,4 @@ pip install requests
     "action_type": "ROUTER_WEBVIEW",
     "last_updated": "2026-06-04"
   }
-]
+]```
