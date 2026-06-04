@@ -1,6 +1,7 @@
 import requests
 import json
 import time
+import os  # 파일 존재 여부 확인을 위해 추가
 from datetime import datetime
 
 TARGET_QUERIES = [
@@ -123,7 +124,21 @@ def analyze_vulnerability(description, keyword):
                 ]
             )
 
-cve_list = []
+# ★ 1. 기존 데이터 불러오기 (중복 방지를 위해 딕셔너리 사용)
+json_filename = "cve_data.json"
+existing_cves = {}
+
+if os.path.exists(json_filename):
+    try:
+        with open(json_filename, "r", encoding="utf-8") as f:
+            old_data = json.load(f)
+            # 기존 데이터를 cve_id를 키값으로 저장하여 중복을 자동 제거
+            for item in old_data.get("vulnerabilities", []):
+                existing_cves[item["cve_id"]] = item
+        print(f"📂 기존 데이터 {len(existing_cves)}개를 불러왔습니다. 누적 업데이트를 시작합니다.")
+    except Exception as e:
+        print(f"⚠️ 기존 JSON 파일을 읽는 중 오류 발생 (새로 수집을 시작합니다): {e}")
+
 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 
 print("🚀 룰 기반(Rule-based) 데이터 수집 및 자동 분석 모드 시작...")
@@ -147,20 +162,20 @@ for keyword in TARGET_QUERIES:
                 cvss_data = metrics.get("cvssMetricV31", [{}])[0].get("cvssData", {})
                 score = cvss_data.get("baseScore", 0.0)
                 
-                # ★ 여기서 영문 원문을 분석해서 한국어 설명과 가이드를 뽑아냄!
                 easy_desc, step_guide = analyze_vulnerability(desc, keyword)
                 
-                # 추출된 데이터를 회원님의 기존 구조에 맞춰 저장
-                cve_list.append({
+                # ★ 2. 리스트(append) 대신 딕셔너리에 덮어쓰기 방식으로 저장
+                # 같은 cve_id가 있으면 최신 정보로 갱신되고, 없으면 새로 추가됨
+                existing_cves[cve_id] = {
                     "cve_id": cve_id,
                     "device_keyword": keyword, 
                     "port": 80,
                     "cvss_score": score,
                     "description": desc,
-                    "easy_description": easy_desc,         # 변경됨 (룰 기반 맞춤형)
+                    "easy_description": easy_desc,         
                     "danger_keywords": ["IoT 해킹 위협", "원격 권한 탈취", "사생활 노출 위험"],
-                    "step_by_step_guide": step_guide       # 변경됨 (룰 기반 맞춤형)
-                })
+                    "step_by_step_guide": step_guide       
+                }
         else:
             print(f"[{keyword}] 수집 실패 (상태 코드: {response.status_code})")
     except Exception as e:
@@ -168,12 +183,13 @@ for keyword in TARGET_QUERIES:
         
     time.sleep(6) # Rate Limit 차단 방지
 
+# ★ 3. 딕셔너리에 모인 모든 데이터를 다시 리스트로 변환하여 최종 저장
 final_json = {
     "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-    "vulnerabilities": cve_list
+    "vulnerabilities": list(existing_cves.values())
 }
 
-with open("cve_data.json", "w", encoding="utf-8") as f:
+with open(json_filename, "w", encoding="utf-8") as f:
     json.dump(final_json, f, indent=4, ensure_ascii=False)
 
-print("✅ 수집 및 룰 기반 분석 완료! cve_data.json 저장 성공!")
+print(f"✅ 수집 및 룰 기반 분석 완료! 총 {len(existing_cves)}개의 취약점이 {json_filename}에 누적 저장되었습니다!")
