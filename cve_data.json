@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-06-29 02:07:14",
+    "last_updated": "2026-06-30 02:01:11",
     "vulnerabilities": [
         {
             "cve_id": "CVE-2001-0442",
@@ -1468,92 +1468,95 @@
         },
         {
             "cve_id": "CVE-2013-3688",
-            "device_keyword": "tp-link",
+            "device_keyword": "ip camera",
             "port": 80,
             "cvss_score": 0.0,
             "description": "The TP-Link IP Cameras TL-SC3171, TL-SC3130, TL-SC3130G, TL-SC3171G, and possibly other models before beta firmware LM.1.6.18P12_sign6, does not properly restrict access to certain administrative functions, which allows remote attackers to (1) cause a denial of service (device reboot) via a request to cgi-bin/reboot or (2) cause a denial of service (reboot and reset to factory defaults) via a request to cgi-bin/hardfactorydefault.",
-            "easy_description": "공유기의 관리자 설정 문이 활짝 열려있어, 외부에서 누구나 공유기를 마음대로 조작할 수 있는 위험한 상태입니다.",
+            "easy_description": "누구나 알 수 있는 기본 비밀번호로 설정되어 있거나, 인증 과정에 문제가 있어 남이 IP CAMERA 기기를 몰래 훔쳐보거나 조종할 수 있습니다.",
             "danger_keywords": [
                 "IoT 해킹 위협",
                 "원격 권한 탈취",
                 "사생활 노출 위험"
             ],
             "step_by_step_guide": [
-                "1. 이 앱의 [조치하기] 버튼을 눌러 공유기 설정 화면으로 들어가세요.",
-                "2. '시스템 관리'나 '관리자 설정' 메뉴를 찾으세요.",
-                "3. 누구나 알 수 있는 기본 비밀번호(admin 등)를 영문과 숫자가 섞인 복잡한 비밀번호로 꼭 바꿔주세요."
+                "1. 스마트폰에서 이 기기를 조작할 때 쓰는 '전용 앱'을 켜주세요.",
+                "2. 기기 설정이나 내 정보 메뉴로 들어가 '비밀번호 변경' 항목을 찾으세요.",
+                "3. 이름이나 생일이 아닌, 유추하기 어려운 복잡한 비밀번호로 당장 바꿔주세요."
             ]
         },
         {
             "cve_id": "CVE-2013-2578",
-            "device_keyword": "tp-link",
+            "device_keyword": "ip camera",
             "port": 80,
             "cvss_score": 0.0,
             "description": "cgi-bin/admin/servetest in TP-Link IP Cameras TL-SC3130, TL-SC3130G, TL-SC3171, TL-SC3171G, and possibly other models before beta firmware LM.1.6.18P12_sign6 allows remote attackers to execute arbitrary commands via shell metacharacters in (1) the ServerName parameter and (2) other unspecified parameters.",
-            "easy_description": "공유기를 작동시키는 소프트웨어(펌웨어)에 보안 구멍이 발견되었습니다. 해커가 이를 악용해 네트워크를 마비시킬 수 있습니다.",
+            "easy_description": "IP CAMERA 기기를 최신 상태로 업데이트하는 과정에서 해커가 가짜 악성 파일을 끼워 넣을 수 있는 취약점입니다.",
             "danger_keywords": [
                 "IoT 해킹 위협",
                 "원격 권한 탈취",
                 "사생활 노출 위험"
             ],
             "step_by_step_guide": [
-                "1. 이 앱의 [조치하기] 버튼을 눌러 공유기 설정 화면으로 이동하세요.",
-                "2. 메뉴에서 '펌웨어 업그레이드' 또는 '시스템 업데이트' 항목을 찾으세요.",
-                "3. '자동 업그레이드' 버튼을 누르거나 최신 버전을 적용해 주세요."
+                "1. 평소에 집에서 쓰시는 와이파이에 스마트폰이 연결되어 있는지 확인하세요.",
+                "2. 스마트폰에서 해당 기기를 조작하는 '전용 앱(Tapo, Mi Home 등)'을 켜주세요.",
+                "3. 앱 안의 기기 설정 메뉴로 들어가 '소프트웨어(펌웨어) 업데이트' 버튼을 눌러 안전한 최신 버전으로 만들어주세요.",
+                "4. 업데이트가 완전히 끝날 때까지 기기의 전원을 끄거나 코드를 뽑지 마세요."
             ]
         },
         {
             "cve_id": "CVE-2013-2579",
-            "device_keyword": "tp-link",
+            "device_keyword": "ip camera",
             "port": 80,
             "cvss_score": 0.0,
             "description": "TP-Link IP Cameras TL-SC3130, TL-SC3130G, TL-SC3171, TL-SC3171G, and possibly other models before beta firmware LM.1.6.18P12_sign6 have an empty password for the hardcoded \"qmik\" account, which allows remote attackers to obtain administrative access via a TELNET session.",
-            "easy_description": "공유기의 관리자 설정 문이 활짝 열려있어, 외부에서 누구나 공유기를 마음대로 조작할 수 있는 위험한 상태입니다.",
+            "easy_description": "누구나 알 수 있는 기본 비밀번호로 설정되어 있거나, 인증 과정에 문제가 있어 남이 IP CAMERA 기기를 몰래 훔쳐보거나 조종할 수 있습니다.",
             "danger_keywords": [
                 "IoT 해킹 위협",
                 "원격 권한 탈취",
                 "사생활 노출 위험"
             ],
             "step_by_step_guide": [
-                "1. 이 앱의 [조치하기] 버튼을 눌러 공유기 설정 화면으로 들어가세요.",
-                "2. '시스템 관리'나 '관리자 설정' 메뉴를 찾으세요.",
-                "3. 누구나 알 수 있는 기본 비밀번호(admin 등)를 영문과 숫자가 섞인 복잡한 비밀번호로 꼭 바꿔주세요."
+                "1. 스마트폰에서 이 기기를 조작할 때 쓰는 '전용 앱'을 켜주세요.",
+                "2. 기기 설정이나 내 정보 메뉴로 들어가 '비밀번호 변경' 항목을 찾으세요.",
+                "3. 이름이나 생일이 아닌, 유추하기 어려운 복잡한 비밀번호로 당장 바꿔주세요."
             ]
         },
         {
             "cve_id": "CVE-2013-2580",
-            "device_keyword": "tp-link",
+            "device_keyword": "ip camera",
             "port": 80,
             "cvss_score": 0.0,
             "description": "Unrestricted file upload vulnerability in cgi-bin/uploadfile in TP-Link IP Cameras TL-SC3130, TL-SC3130G, TL-SC3171, TL-SC3171G, and possibly other models before beta firmware LM.1.6.18P12_sign6, allows remote attackers to upload arbitrary files, then accessing it via a direct request to the file in the mnt/mtd directory.",
-            "easy_description": "공유기를 작동시키는 소프트웨어(펌웨어)에 보안 구멍이 발견되었습니다. 해커가 이를 악용해 네트워크를 마비시킬 수 있습니다.",
+            "easy_description": "IP CAMERA 기기를 최신 상태로 업데이트하는 과정에서 해커가 가짜 악성 파일을 끼워 넣을 수 있는 취약점입니다.",
             "danger_keywords": [
                 "IoT 해킹 위협",
                 "원격 권한 탈취",
                 "사생활 노출 위험"
             ],
             "step_by_step_guide": [
-                "1. 이 앱의 [조치하기] 버튼을 눌러 공유기 설정 화면으로 이동하세요.",
-                "2. 메뉴에서 '펌웨어 업그레이드' 또는 '시스템 업데이트' 항목을 찾으세요.",
-                "3. '자동 업그레이드' 버튼을 누르거나 최신 버전을 적용해 주세요."
+                "1. 평소에 집에서 쓰시는 와이파이에 스마트폰이 연결되어 있는지 확인하세요.",
+                "2. 스마트폰에서 해당 기기를 조작하는 '전용 앱(Tapo, Mi Home 등)'을 켜주세요.",
+                "3. 앱 안의 기기 설정 메뉴로 들어가 '소프트웨어(펌웨어) 업데이트' 버튼을 눌러 안전한 최신 버전으로 만들어주세요.",
+                "4. 업데이트가 완전히 끝날 때까지 기기의 전원을 끄거나 코드를 뽑지 마세요."
             ]
         },
         {
             "cve_id": "CVE-2013-2581",
-            "device_keyword": "tp-link",
+            "device_keyword": "ip camera",
             "port": 80,
             "cvss_score": 0.0,
             "description": "cgi-bin/firmwareupgrade in TP-Link IP Cameras TL-SC3130, TL-SC3130G, TL-SC3171, TL-SC3171G, and possibly other models before beta firmware LM.1.6.18P12_sign6 allows remote attackers to modify the firmware revision via a \"preset\" action.",
-            "easy_description": "공유기를 작동시키는 소프트웨어(펌웨어)에 보안 구멍이 발견되었습니다. 해커가 이를 악용해 네트워크를 마비시킬 수 있습니다.",
+            "easy_description": "IP CAMERA 기기를 최신 상태로 업데이트하는 과정에서 해커가 가짜 악성 파일을 끼워 넣을 수 있는 취약점입니다.",
             "danger_keywords": [
                 "IoT 해킹 위협",
                 "원격 권한 탈취",
                 "사생활 노출 위험"
             ],
             "step_by_step_guide": [
-                "1. 이 앱의 [조치하기] 버튼을 눌러 공유기 설정 화면으로 이동하세요.",
-                "2. 메뉴에서 '펌웨어 업그레이드' 또는 '시스템 업데이트' 항목을 찾으세요.",
-                "3. '자동 업그레이드' 버튼을 누르거나 최신 버전을 적용해 주세요."
+                "1. 평소에 집에서 쓰시는 와이파이에 스마트폰이 연결되어 있는지 확인하세요.",
+                "2. 스마트폰에서 해당 기기를 조작하는 '전용 앱(Tapo, Mi Home 등)'을 켜주세요.",
+                "3. 앱 안의 기기 설정 메뉴로 들어가 '소프트웨어(펌웨어) 업데이트' 버튼을 눌러 안전한 최신 버전으로 만들어주세요.",
+                "4. 업데이트가 완전히 끝날 때까지 기기의 전원을 끄거나 코드를 뽑지 마세요."
             ]
         },
         {
