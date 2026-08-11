@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-08-10 00:45:12",
+    "last_updated": "2026-08-11 00:44:52",
     "vulnerabilities": [
         {
             "cve_id": "CVE-2001-0442",
@@ -4455,6 +4455,24 @@
                 "1. 스마트폰에서 기기 전용 앱을 켜주세요.",
                 "2. 기기 설정에서 '최신 소프트웨어(펌웨어) 업데이트'를 진행하여 제조사가 제공하는 보안 패치를 적용하세요.",
                 "3. 가급적 비밀번호가 없는 공개 와이파이(카페, 지하철 등)에서는 기기 조작을 피해 주세요."
+            ]
+        },
+        {
+            "cve_id": "CVE-2026-19379",
+            "device_keyword": "iptime",
+            "port": 80,
+            "cvss_score": 7.3,
+            "description": "A vulnerability was determined in EFM ipTIME AX8004M 15.09.0. Impacted is the function popen of the file /cgi/d.cgi of the component CGI Endpoint. This manipulation of the argument fname causes os command injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+            "easy_description": "공유기에 해커가 원격으로 접속해 악성코드를 심거나 인터넷을 마음대로 끊어버릴 수 있는 매우 심각한 상태입니다.",
+            "danger_keywords": [
+                "IoT 해킹 위협",
+                "원격 권한 탈취",
+                "사생활 노출 위험"
+            ],
+            "step_by_step_guide": [
+                "1. 이 앱의 [조치하기] 버튼을 눌러 공유기 관리자 화면으로 들어가세요.",
+                "2. '보안 설정'이나 '방화벽 설정' 메뉴에서 외부에서 접속하는 기능(원격 관리 등)이 켜져 있다면 당장 꺼주세요.",
+                "3. '시스템 관리' 메뉴로 이동해 최신 버전으로 업그레이드를 진행하세요."
             ]
         }
     ]
