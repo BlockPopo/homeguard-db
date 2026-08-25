@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-08-24 00:31:20",
+    "last_updated": "2026-08-25 00:30:40",
     "vulnerabilities": [
         {
             "cve_id": "CVE-2001-0442",
@@ -4481,6 +4481,42 @@
             "port": 80,
             "cvss_score": 10.0,
             "description": "A vulnerability was detected in EFM ipTIME A3004T 14.19.0. The affected element is the function httpcon_check_session_url of the component Session Validation. Performing a manipulation results in improper authentication. Remote exploitation of the attack is possible. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+            "easy_description": "공유기의 관리자 설정 문이 활짝 열려있어, 외부에서 누구나 공유기를 마음대로 조작할 수 있는 위험한 상태입니다.",
+            "danger_keywords": [
+                "IoT 해킹 위협",
+                "원격 권한 탈취",
+                "사생활 노출 위험"
+            ],
+            "step_by_step_guide": [
+                "1. 이 앱의 [조치하기] 버튼을 눌러 공유기 설정 화면으로 들어가세요.",
+                "2. '시스템 관리'나 '관리자 설정' 메뉴를 찾으세요.",
+                "3. 누구나 알 수 있는 기본 비밀번호(admin 등)를 영문과 숫자가 섞인 복잡한 비밀번호로 꼭 바꿔주세요."
+            ]
+        },
+        {
+            "cve_id": "CVE-2026-78167",
+            "device_keyword": "iptime",
+            "port": 80,
+            "cvss_score": 10.0,
+            "description": "A weakness has been identified in EFM ipTIME T16000M 14.20.2. The impacted element is the function httpcon_check_session_url of the component Session Validation Handler. This manipulation causes improper authentication. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+            "easy_description": "공유기의 관리자 설정 문이 활짝 열려있어, 외부에서 누구나 공유기를 마음대로 조작할 수 있는 위험한 상태입니다.",
+            "danger_keywords": [
+                "IoT 해킹 위협",
+                "원격 권한 탈취",
+                "사생활 노출 위험"
+            ],
+            "step_by_step_guide": [
+                "1. 이 앱의 [조치하기] 버튼을 눌러 공유기 설정 화면으로 들어가세요.",
+                "2. '시스템 관리'나 '관리자 설정' 메뉴를 찾으세요.",
+                "3. 누구나 알 수 있는 기본 비밀번호(admin 등)를 영문과 숫자가 섞인 복잡한 비밀번호로 꼭 바꿔주세요."
+            ]
+        },
+        {
+            "cve_id": "CVE-2026-78168",
+            "device_keyword": "iptime",
+            "port": 80,
+            "cvss_score": 9.8,
+            "description": "A security vulnerability has been detected in EFM ipTIME T24000M up to 14.20.0. This affects the function httpcon_check_session_url of the component Session Validation Handler. Such manipulation leads to improper authentication. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
             "easy_description": "공유기의 관리자 설정 문이 활짝 열려있어, 외부에서 누구나 공유기를 마음대로 조작할 수 있는 위험한 상태입니다.",
             "danger_keywords": [
                 "IoT 해킹 위협",
