@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-10-27 02:36:59",
+    "last_updated": "2026-10-28 02:45:38",
     "vulnerabilities": [
         {
             "cve_id": "CVE-2001-0442",
@@ -4545,6 +4545,23 @@
                 "1. 이 앱의 [조치하기] 버튼을 눌러 공유기 관리자 화면으로 들어가세요.",
                 "2. '보안 설정'이나 '방화벽 설정' 메뉴에서 외부에서 접속하는 기능(원격 관리 등)이 켜져 있다면 당장 꺼주세요.",
                 "3. '시스템 관리' 메뉴로 이동해 최신 버전으로 업그레이드를 진행하세요."
+            ]
+        },
+        {
+            "cve_id": "CVE-2026-78845",
+            "device_keyword": "smart bulb",
+            "port": 80,
+            "cvss_score": 0.0,
+            "description": "Aidot products Linkind Matter Smart Plug 1.01.32, OREiN Matter Smart Light Bulb 3.15.21, and Linkind Wi-Fi Smart Light Bulb 3.30.17 are vulnerable to Remote Code Execution (RCE) via UPnP root description parsing.",
+            "easy_description": "해커가 멀리서 SMART BULB 기기를 마음대로 조종하거나 기기를 망가뜨릴 수 있는 치명적인 결함이 발견되었습니다.",
+            "danger_keywords": [
+                "IoT 해킹 위협",
+                "원격 권한 탈취",
+                "사생활 노출 위험"
+            ],
+            "step_by_step_guide": [
+                "1. 즉시 스마트폰에서 기기 전용 앱을 켜고 최신 소프트웨어(펌웨어) 업데이트를 진행하세요.",
+                "2. 만약 제조사에서 아직 업데이트를 만들어주지 않았다면, 당분간 기기의 전원을 끄고 사용을 멈추는 것이 가장 안전합니다."
             ]
         }
     ]
