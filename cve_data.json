@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-10-31 02:55:57",
+    "last_updated": "2026-11-01 02:49:38",
     "vulnerabilities": [
         {
             "cve_id": "CVE-2001-0442",
@@ -4551,7 +4551,7 @@
             "cve_id": "CVE-2026-78845",
             "device_keyword": "smart bulb",
             "port": 80,
-            "cvss_score": 0.0,
+            "cvss_score": 9.8,
             "description": "Aidot products Linkind Matter Smart Plug 1.01.32, OREiN Matter Smart Light Bulb 3.15.21, and Linkind Wi-Fi Smart Light Bulb 3.30.17 are vulnerable to Remote Code Execution (RCE) via UPnP root description parsing.",
             "easy_description": "해커가 멀리서 SMART BULB 기기를 마음대로 조종하거나 기기를 망가뜨릴 수 있는 치명적인 결함이 발견되었습니다.",
             "danger_keywords": [
